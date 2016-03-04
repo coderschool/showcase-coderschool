@@ -1,7 +1,7 @@
 
 var footer = document.getElementsByClassName('showcase-footer');
 if (window.innerHeight > 668) {
-    var screenHeight = 668; 
+    var screenHeight = 668;
     footer[0].style.display = 'inline-block';
 } else {
     var screenHeight = window.innerHeight;
@@ -22,19 +22,19 @@ var home = document.getElementById('home');
 
 function show_demo(appName) {
 
-    var fileName_intro = '/content/' + appName + '.txt';
-    document.getElementById('gif_image').innerHTML = '<img class="animated zoomIn" src="img/' + appName + '.gif"/>';
-    var introArea = document.getElementById('text-intro');
-    introArea.innerText = readTextFile(fileName_intro)[0];
-    document.getElementById('download-button').href = readTextFile(fileName_intro)[1];
-    var teamArea = document.getElementById("text-team");
-    teamArea.innerText = readTextFile(fileName_intro)[2];
-    var avatarArea = document.getElementsByClassName('member-avatar');
-    var nameArea = document.getElementsByClassName('member-name');
-    for (i = 0; i < 3; i++) {
-        avatarArea[i].src = readTextFile(fileName_intro)[i + 3];
-        nameArea[i].innerText = readTextFile(fileName_intro)[i + 6];
-    }
+  var fileName_intro = '/content/' + appName + '.txt';
+  document.getElementById('gif_image').innerHTML = '<img class="animated zoomIn" src="img/' + appName + '.gif"/>';
+  var introArea = document.getElementById('text-intro');
+  introArea.innerText = readTextFile(fileName_intro)[0];
+  document.getElementById('download-button').href = readTextFile(fileName_intro)[1];
+  var teamArea = document.getElementById("text-team");
+  teamArea.innerText = readTextFile(fileName_intro)[2];
+  var avatarArea = document.getElementsByClassName('member-avatar');
+  var nameArea = document.getElementsByClassName('member-name');
+  for (i = 0; i < 3; i++) {
+    avatarArea[i].src = readTextFile(fileName_intro)[i + 3];
+    nameArea[i].innerText = readTextFile(fileName_intro)[i + 6];
+  }
 };
 
 function show_home() {
@@ -131,34 +131,34 @@ $(document).ready(function () {
 });
 
 
-(function () {
-    var pageWrap = document.getElementById('pagewrap'),
-        pages = [].slice.call(pageWrap.querySelectorAll('div.container')),
-        currentPage = 0,
-        triggerLoading = [].slice.call(pageWrap.querySelectorAll('a.pageload-link')),
-        loader = new SVGLoader(document.getElementById('loader'), {
-            speedIn: 300,
-            easingIn: mina.easeinout
-        });
+//(function () {
+//    var pageWrap = document.getElementById('pagewrap'),
+//        pages = [].slice.call(pageWrap.querySelectorAll('div.container')),
+//        currentPage = 0,
+//        triggerLoading = [].slice.call(pageWrap.querySelectorAll('a.pageload-link')),
+//        loader = new SVGLoader(document.getElementById('loader'), {
+//            speedIn: 300,
+//            easingIn: mina.easeinout
+//        });
+//
+//    function init() {
+//        triggerLoading.forEach(function (trigger) {
+//            trigger.addEventListener('click', function (ev) {
+//                ev.preventDefault();
+//                loader.show();
+//                // after some time hide loader
+//                setTimeout(function () {
+//                    loader.hide();
+//                    classie.removeClass(pages[currentPage], 'show');
+//                    // update..
+//                    currentPage = currentPage ? 0 : 1;
+//                    classie.addClass(pages[currentPage], 'show');
+//
+//                }, 2000);
+//            });
+//        });
+//    }
+//
+//    init();
 
-    function init() {
-        triggerLoading.forEach(function (trigger) {
-            trigger.addEventListener('click', function (ev) {
-                ev.preventDefault();
-                loader.show();
-                // after some time hide loader
-                setTimeout(function () {
-                    loader.hide();
-                    classie.removeClass(pages[currentPage], 'show');
-                    // update..
-                    currentPage = currentPage ? 0 : 1;
-                    classie.addClass(pages[currentPage], 'show');
-
-                }, 2000);
-            });
-        });
-    }
-
-    init();
-
-})();
+//})();

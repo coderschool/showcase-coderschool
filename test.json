@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "name": "TeachMe",
+      "gifUrl": "http://showcase.coderschool.vn/img/Teachme.gif",
+      "introText": "Hello there!",
+      "members": [
+        {
+          "name": "Vy"
+        },
+        {
+          "name": "Khang"
+        },
+        {
+          "name": "Bao"
+        }
+      ],
+      "cohortName": "Swift August 2015"
+    },
+    {
+      "name": "TipCal"
+    }
+  ]
+}

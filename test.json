@@ -1,24 +1,48 @@
 {
-  "apps": [
+  "records": [
     {
-      "name": "TeachMe",
-      "gifUrl": "http://showcase.coderschool.vn/img/Teachme.gif",
-      "introText": "Hello there!",
-      "members": [
-        {
-          "name": "Vy"
-        },
-        {
-          "name": "Khang"
-        },
-        {
-          "name": "Bao"
-        }
-      ],
-      "cohortName": "Swift August 2015"
-    },
-    {
-      "name": "TipCal"
+      "id": "recbuNqWOIGBEdZ8h",
+      "fields": {
+        "name": "Yelp",
+        "description": "Homework for Swift Class! Lorem Ipsum.\n\n\n",
+        "media": [
+          {
+            "id": "attogMo13SbId69ok",
+            "url": "https://dl.airtable.com/Qh5pqKxRRP23PUob5Ulj_Yelp%20(1).gif",
+            "filename": "Yelp (1).gif",
+            "size": 5524398,
+            "type": "image/gif"
+          }
+        ],
+        "cohortName": [
+          "Swift August 2015"
+        ],
+        "members": [
+          "rec4cAybWAYaDTPFm"
+        ],
+        "appIcon": [
+          {
+            "id": "atthYOR48bhrJWHlO",
+            "url": "https://dl.airtable.com/NOhSXKkJQyalsDG0Y0Ig_restaurantIcon-58.png",
+            "filename": "restaurantIcon-58.png",
+            "size": 1577,
+            "type": "image/png",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/igeXLZ1iSxCZpkgtFNv7_restaurantIcon-58.png",
+                "width": 36,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/gA1fmZAyT9Cf6sR7E0Ma_restaurantIcon-58.png",
+                "width": 256,
+                "height": 256
+              }
+            }
+          }
+        ]
+      },
+      "createdTime": "2016-03-04T14:09:19.000Z"
     }
   ]
 }

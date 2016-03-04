@@ -1,0 +1,31 @@
+{
+  "id": "rec4cAybWAYaDTPFm",
+  "fields": {
+    "name": "Minh Chau",
+    "media": [
+      {
+        "id": "atth2UpI6yBtyGj2g",
+        "url": "https://dl.airtable.com/FFEW9qycQiC7mI43d8GN_chau.png",
+        "filename": "chau.png",
+        "size": 82852,
+        "type": "image/png",
+        "thumbnails": {
+          "small": {
+            "url": "https://dl.airtable.com/DLtlTmnGRFW3GZTs0FMA_chau.png",
+            "width": 36,
+            "height": 36
+          },
+          "large": {
+            "url": "https://dl.airtable.com/BEHaF6vMSL2SnJwY5Lm0_chau.png",
+            "width": 256,
+            "height": 256
+          }
+        }
+      }
+    ],
+    "apps": [
+      "recbuNqWOIGBEdZ8h"
+    ]
+  },
+  "createdTime": "2016-03-04T14:14:17.000Z"
+}

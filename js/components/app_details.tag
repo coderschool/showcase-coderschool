@@ -3,9 +3,8 @@
         <h5><span>Introduction</span></h5>
         <div id="introduction-text" class="text-block">
             <p id="text-intro">
-                {introText}
+                {description}
             </p>
-            <a id="download-button" href="" target="_blank"><button  class="btn btn-default btn-small"><p style="color:#2FACE0;margin-left:45px;">Download</p></button></a>
         </div>
 
     </div>
@@ -14,10 +13,7 @@
         <p id="text-team" class="team-details">
             {cohortName} </p>
         <div class="member-list row">
-            <div class="member-block col-md-4 no-side-padding text-center" each="{members}">
-                <img class="member-avatar" src="/img/unknown-user.png" />
-                <p class="member-name">{name}</p>
-            </div>
+            <member each="{members}"></member>
        </div>
     </div>
 
@@ -37,5 +33,27 @@
             $('#right-block').addClass('animated slideInRight');
         });
     </script>
-    
+
 </app-details>
+
+<member>
+    <div class="member-block col-md-4 no-side-padding text-center">
+        <img class="member-avatar" src="{thumbUrl}" />
+        <p class="member-name">{name}</p>
+    </div>
+
+    <script>
+        this.on('mount', function() {
+            var self = this;
+//            var url = './chau.json';
+            var url = '/airtable/v0/appXISBe0Du86nEiX/People/' + this.id;
+            $.getJSON(url).success(function(data) {
+                var fields = data.fields;
+                self.update({
+                    name: fields.name,
+                    thumbUrl: fields.media[0].thumbnails.large.url
+                });
+            });
+        });
+    </script>
+</member>

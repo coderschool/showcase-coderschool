@@ -13,7 +13,7 @@
            this.gifImage.attr('src', app.gifUrl);
 
             opts.appDetails.update({
-                introText: app.introText,
+                description: app.description,
                 members: app.members,
                 cohortName: app.cohortName
             });
@@ -21,13 +21,33 @@
 
         this.fetchAndUpdate = function() {
             var self = this;
-            $.getJSON('./test.json').success(function(data) {
+            // Reverse proxy to hide our API key from the world.
+            var url = "/airtable/v0/appXISBe0Du86nEiX/Apps?maxRecords=10";
+//            var url = './test.json';
+            $.getJSON(url).success(function(data) {
+                var records = data.records;
+                var apps = [];
+                for(var i=0; i < records.length; i++) {
+                    var fieldsData = records[i].fields;
+                    var members = [];
+                    for(var j=0; j<fieldsData.members.length; j++) {
+                        members.push({ id: fieldsData.members[j] });
+                    }
+                    apps.push({
+                        name: fieldsData.name,
+                        appIconUrl: fieldsData.appIcon[0].url,
+                        description: fieldsData.description,
+                        gifUrl: fieldsData.media[0].url,
+                        cohortName: fieldsData.cohortName,
+                        members: members
+                    });
+                }
                 if(!self.items) {
                     setTimeout(function () {
-                        self.showDemo(data.apps[0]);
+                        self.showDemo(apps[0]);
                     }, 0);
                 }
-                self.update({items: data.apps});
+                self.update({items: apps});
             });
         };
 
@@ -61,7 +81,7 @@
 <app-icon>
     <div class="col-md-4 app-icon text-center">
         <div class="img">
-            <img src="../img/app-icon-teachme.png">
+            <img src="{appIconUrl}">
             <div class="overlay">
                 <a id="teachme" onclick="{ onAppIconClick }" class="expand">></a>
                 <a class="close-overlay hidden">x</a>

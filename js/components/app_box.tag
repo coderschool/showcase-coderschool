@@ -33,9 +33,13 @@
                     for(var j=0; j<fieldsData.members.length; j++) {
                         members.push({ id: fieldsData.members[j] });
                     }
+                    var appIconUrl = 'img/app-icon.png';
+                    if(fieldsData.appIcon && fieldsData.appIcon.length > 0) {
+                        appIconUrl = fieldsData.appIcon[0].url;
+                    }
                     apps.push({
                         name: fieldsData.name,
-                        appIconUrl: fieldsData.appIcon[0].url,
+                        appIconUrl: appIconUrl,
                         description: fieldsData.description,
                         gifUrl: fieldsData.media[0].url,
                         cohortName: fieldsData.cohortName,

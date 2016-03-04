@@ -3,7 +3,7 @@ body {
 }
 @font-face {
     font-family: 'PantonLight';
-    src: url('../font/panton-light.otf');
+    src: url('../font/panton-light.ttf');
 }
 @font-face {
     font-family: 'PantonBlack';

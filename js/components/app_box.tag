@@ -21,9 +21,12 @@
 
         this.fetchAndUpdate = function() {
             var self = this;
-            // Reverse proxy to hide our API key from the world.
-            var url = "/airtable/v0/appXISBe0Du86nEiX/Apps?maxRecords=10";
-//            var url = './test.json';
+            if (location.hostname == 'localhost') {
+              var url = '/test.json';
+            } else {
+              // Reverse proxy to hide our API key from the world.
+              var url = "/airtable/v0/appXISBe0Du86nEiX/Apps?maxRecords=10";
+            }
             $.getJSON(url).success(function(data) {
                 var records = data.records;
                 var apps = [];

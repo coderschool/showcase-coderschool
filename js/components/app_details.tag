@@ -45,8 +45,11 @@
     <script>
         this.on('mount', function() {
             var self = this;
-//            var url = './chau.json';
-            var url = '/airtable/v0/appXISBe0Du86nEiX/People/' + this.id;
+            if (location.hostname == 'localhost') {
+              var url = '/chau.json';
+            } else {
+              var url = '/airtable/v0/appXISBe0Du86nEiX/People/' + this.id;
+            }
             $.getJSON(url).success(function(data) {
                 var fields = data.fields;
                 self.update({

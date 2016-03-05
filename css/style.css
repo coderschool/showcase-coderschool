@@ -1,6 +1,9 @@
-body {
+@media (min-width: 992px) {
+  body {
     overflow: hidden;
+  }
 }
+
 @font-face {
     font-family: 'PantonLight';
     src: url('../font/panton-light.ttf');
@@ -15,6 +18,7 @@ body {
 }
 .menu li {
     padding: 25px 20px;
+    /* TODO: not working well for medium screen size */
     font-size: 20px;
     font-family: PantonLight;
     line-height: 20px;
@@ -364,8 +368,7 @@ h4 {
    
 }
 #app-list .app-icon img {
-    width: 65%;
-     cursor: pointer;
+    cursor: pointer;
 }
 #app-list .app-icon h6 {
     font-family: PantonLight;
@@ -430,6 +433,7 @@ h4 {
     width: 55%;
     border: 2px #bdc3c7 solid;
     border-radius: 100%;
+    max-width: 200px;
 }
 .member-block p {
     font-size: 13px;
@@ -540,11 +544,16 @@ a.expand {
 #gif-image{
     position: absolute;
     top: 70px;
-    left: 40px;
+    left: 20px;
+    right: 17px;
+}
+.iphone-wireframe {
+    width: 251px;
+    margin: 0 auto;
 }
 
 #gif-image img {
-    width: 68%;
+    max-width: 100%;
 }
 .hide-image {
     display: none;  

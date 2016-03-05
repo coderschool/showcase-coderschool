@@ -14,7 +14,7 @@ then go to http://localhost:8000.
 
 ```
 # if not yet installed, run this once
-npm instal -g http-server
+npm install -g http-server
 
 # run server
 http-server

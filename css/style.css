@@ -920,7 +920,7 @@ should not handle sizing (heights/widths) of things, that should be in CSS..*/
  */
 .spinner-wrapper {
     position: absolute;
-    left: 195px;
+    left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
 }

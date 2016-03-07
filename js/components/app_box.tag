@@ -10,7 +10,13 @@
         };
 
         this.showDemo = function(app) {
-           this.gifImage.attr('src', app.gifUrl);
+            var $img = $(new Image());
+            $img.on('load', function() {
+                $('.spinner-overlay').hide();
+            });
+            $img.attr('src', app.gifUrl);
+            this.gifImage.replaceWith($img);
+            this.gifImage = $img;
 
             opts.appDetails.update({
                 description: app.description,
@@ -21,6 +27,8 @@
 
         this.fetchAndUpdate = function() {
             var self = this;
+
+            $('.spinner-overlay').show();
             if (location.hostname == 'localhost') {
               var url = '/test.json';
             } else {

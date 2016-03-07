@@ -25,23 +25,35 @@
 <script src="js/components/app_details.tag" type="riot/tag"></script>
 <script src="https://cdn.jsdelivr.net/riot/2.3/riot+compiler.min.js"></script>
 
+<!-- TODO: Convert this to a component. -->
+    <div class="spinner-overlay">
+        <div class="spinner-wrapper">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+    </div>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="http://www.coderschool.vn">
                     <img class="logo full-logo hidden-sm" src="img/small_cropped_afb4l1.1.png" />
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="http://www.coderschool.vn">Home</a></li>
                     <li><a class="active-menu" href="#">Showcase</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li class="contact-button">
-                        <button class="btn btn-small btn-warning">Contact Us </button>
+                        <a href="http://www.coderschool.vn/#contact">
+                            <button class="btn btn-small btn-warning">Contact Us</button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -84,7 +96,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
-    <script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
+<script>
         // A bit of a Hack to pass in the appDetails
         riot.compile(function() {
             // here tags are compiled and riot.mount works synchronously

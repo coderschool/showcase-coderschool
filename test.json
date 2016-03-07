@@ -4,7 +4,7 @@
       "id": "recbuNqWOIGBEdZ8h",
       "fields": {
         "name": "Yelp",
-        "description": "Homework for Swift Class! Lorem Ipsum.\n\n\n",
+        "description": "The two primary challenges of this homework, which is given in Week 2, are to learn how to use AutoLayout for complicated UITableView rows, and establishing communication between view controllers via the delegate pattern.\n\nChau went above and beyond by also adding a map with custom map view markers, and for extra points, used Google Maps, which is a bit harder to integrate than using MapKit.\n\n",
         "media": [
           {
             "id": "attogMo13SbId69ok",
@@ -40,9 +40,74 @@
               }
             }
           }
+        ],
+        "mediaPreview": [
+          {
+            "id": "attWcL8HYcXVrbYdK",
+            "url": "https://dl.airtable.com/AXZpztRYQ1aKRw1Ltk4J_yelpPreview.png",
+            "filename": "yelpPreview.png",
+            "size": 83806,
+            "type": "image/png",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/cuunYB0QmqYMYFcsLr0g_yelpPreview.png",
+                "width": 20,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/4Q6vUUPTTW2i2zrdcQFF_yelpPreview.png",
+                "width": 256,
+                "height": 455
+              }
+            }
+          }
         ]
       },
       "createdTime": "2016-03-04T14:09:19.000Z"
+    },
+    {
+      "id": "recHmC1mbZeAxNmPD",
+      "fields": {
+        "name": "MovieDB",
+        "description": "The first homework, Movies, is all about learning how to call external APIs, update table views, and pass simple data between controllers. Buu went above and beyond by not only creating a really beautiful app, but by utilizing the full potential of the AlamoFire Networking library to cache API and image responses. You can also see things in grid view or list view, and, in both cases, run the gamut of great app features: search, pull to refresh, and infinite scroll.\n\n",
+        "media": [
+          {
+            "id": "attiJkN9WnfYnCsmu",
+            "url": "https://dl.airtable.com/IysKp3aESNiInkfVSJNV_walkthrough.gif",
+            "filename": "walkthrough.gif",
+            "size": 5869837,
+            "type": "image/gif"
+          }
+        ],
+        "cohortName": [
+          "Swift Nov 2015"
+        ],
+        "members": [
+          "recb4meiUD21MnJfc"
+        ],
+        "mediaPreview": [
+          {
+            "id": "attlJIhdcl0gzTdh6",
+            "url": "https://dl.airtable.com/2I17WVF2To6Zbm7vlbKB_moviesPreview.png",
+            "filename": "moviesPreview.png",
+            "size": 103637,
+            "type": "image/png",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/lzW8jMYjTbK7on7zbyiK_moviesPreview.png",
+                "width": 20,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/U1yHhCrR5hVEOmDBSUFg_moviesPreview.png",
+                "width": 256,
+                "height": 463
+              }
+            }
+          }
+        ]
+      },
+      "createdTime": "2016-03-07T13:36:41.058Z"
     }
   ]
 }

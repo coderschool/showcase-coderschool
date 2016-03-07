@@ -10,16 +10,16 @@
         };
 
         this.showDemo = function(app) {
-            var $img = $(new Image());
-            var self = this;
-            $img.one('load', function() {
-                $('.spinner-overlay').hide();
-                $img.attr('src', app.gifUrl);
-                self.gifImage.replaceWith($img);
-                self.gifImage = $img;
-            });
-            $img.attr('src', app.gifUrl);
+            var $img = $('<img id="gif-image-inner"/>');
+            $img.attr('src', app.gifPreviewUrl);
+            $img.attr('data-gif', app.gifUrl);
 
+            $('#gif-image').empty();
+            $('#gif-image').append($img);
+            $img.gifplayer();
+            setTimeout(function() {
+                $img.trigger('click');
+            });
 
             opts.appDetails.update({
                 description: app.description,
@@ -31,7 +31,7 @@
         this.fetchAndUpdate = function() {
             var self = this;
 
-            $('.spinner-overlay').hide();
+            $('.spinner-overlay').show();
             if (location.hostname == 'localhost') {
               var url = '/test.json';
             } else {
@@ -51,11 +51,13 @@
                     if(fieldsData.appIcon && fieldsData.appIcon.length > 0) {
                         appIconUrl = fieldsData.appIcon[0].url;
                     }
+                    console.log('fieldsData', fieldsData);
                     apps.push({
                         name: fieldsData.name,
                         appIconUrl: appIconUrl,
                         description: fieldsData.description,
                         gifUrl: fieldsData.media[0].url,
+                        gifPreviewUrl: fieldsData.mediaPreview[0].url,
                         cohortName: fieldsData.cohortName,
                         members: members
                     });
@@ -66,6 +68,8 @@
                     }, 0);
                 }
                 self.update({items: apps});
+                $('.spinner-overlay').hide();
+
             });
         };
 
@@ -76,21 +80,19 @@
             $('#app-box').slimScroll({
                 height: 229
             });
-            this.gifImage = $('#gif-image').find('img');
+            this.gifImage = $('#gif-image-inner');
         });
 
         this.on('update', function() {
-            console.log('updating');
-            if(this.gifImage) {
-                this.gifImage.removeClass('animated zoomIn');
-            }
+//            if(this.gifImage) {
+//                this.gifImage.removeClass('animated zoomIn');
+//            }
         });
 
         this.on('updated', function() {
-            console.log('22222');
-            if(this.gifImage) {
-                this.gifImage.addClass('animated zoomIn');
-            }
+//            if(this.gifImage) {
+//                this.gifImage.addClass('animated zoomIn');
+//            }
         });
 
     </script>

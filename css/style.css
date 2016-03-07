@@ -567,7 +567,7 @@ a.expand {
     
 }
 #app-list, #introduction {
-    animation-delay: 0.05   s;
+    animation-delay: 0.05s;
     animation-duration: 0.8s;
 }
 
@@ -920,8 +920,8 @@ should not handle sizing (heights/widths) of things, that should be in CSS..*/
  */
 .spinner-wrapper {
     position: absolute;
-    left: 50%;
-    top: 33%;
+    left: 195px;
+    top: 50%;
     transform: translate(-50%,-50%);
 }
 .sk-folding-cube {

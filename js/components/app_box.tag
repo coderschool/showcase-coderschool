@@ -11,12 +11,14 @@
 
         this.showDemo = function(app) {
             var $img = $(new Image());
+            var self = this;
             $img.one('load', function() {
                 $('.spinner-overlay').hide();
+                self.gifImage.replaceWith($img);
+                self.gifImage = $img;
             });
             $img.attr('src', app.gifUrl);
-            this.gifImage.replaceWith($img);
-            this.gifImage = $img;
+
 
             opts.appDetails.update({
                 description: app.description,
@@ -28,7 +30,7 @@
         this.fetchAndUpdate = function() {
             var self = this;
 
-            $('.spinner-overlay').show();
+            $('.spinner-overlay').hide();
             if (location.hostname == 'localhost') {
               var url = '/test.json';
             } else {
@@ -77,12 +79,14 @@
         });
 
         this.on('update', function() {
+            console.log('updating');
             if(this.gifImage) {
                 this.gifImage.removeClass('animated zoomIn');
             }
         });
 
         this.on('updated', function() {
+            console.log('22222');
             if(this.gifImage) {
                 this.gifImage.addClass('animated zoomIn');
             }

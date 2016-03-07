@@ -14,6 +14,7 @@
             var self = this;
             $img.one('load', function() {
                 $('.spinner-overlay').hide();
+                $img.attr('src', app.gifUrl);
                 self.gifImage.replaceWith($img);
                 self.gifImage = $img;
             });

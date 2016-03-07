@@ -24,17 +24,6 @@
 <script src="js/components/app_details.tag" type="riot/tag"></script>
 <script src="https://cdn.jsdelivr.net/riot/2.3/riot+compiler.min.js"></script>
 
-<!-- TODO: Convert this to a component. -->
-    <div class="spinner-overlay overlay">
-        <div class="spinner-wrapper">
-            <div class="sk-folding-cube">
-                <div class="sk-cube1 sk-cube"></div>
-                <div class="sk-cube2 sk-cube"></div>
-                <div class="sk-cube4 sk-cube"></div>
-                <div class="sk-cube3 sk-cube"></div>
-            </div>
-        </div>
-    </div>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -78,6 +67,14 @@
               <div class="frame-container">
                 <div class="iphone-wireframe animated zoomIn">
                   <img src="img/wireframe.png" />
+                    <div class="spinner-wrapper">
+                        <div class="sk-folding-cube">
+                            <div class="sk-cube1 sk-cube"></div>
+                            <div class="sk-cube2 sk-cube"></div>
+                            <div class="sk-cube4 sk-cube"></div>
+                            <div class="sk-cube3 sk-cube"></div>
+                        </div>
+                    </div>
                   <div id="gif-image">
                     <img src="#"/>
                   </div>
@@ -96,7 +93,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 
 <script>
         // A bit of a Hack to pass in the appDetails

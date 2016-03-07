@@ -10,16 +10,7 @@
         };
 
         this.showDemo = function(app) {
-            var $img = $(new Image());
-            var self = this;
-            $img.one('load', function() {
-                $('.spinner-overlay').hide();
-                $img.attr('src', app.gifUrl);
-                self.gifImage.replaceWith($img);
-                self.gifImage = $img;
-            });
-            $img.attr('src', app.gifUrl);
-
+            this.gifImage.removeAttr('src').attr('src', app.gifUrl);
 
             opts.appDetails.update({
                 description: app.description,
@@ -80,14 +71,12 @@
         });
 
         this.on('update', function() {
-            console.log('updating');
             if(this.gifImage) {
                 this.gifImage.removeClass('animated zoomIn');
             }
         });
 
         this.on('updated', function() {
-            console.log('22222');
             if(this.gifImage) {
                 this.gifImage.addClass('animated zoomIn');
             }

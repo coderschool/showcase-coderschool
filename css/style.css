@@ -1,3 +1,7 @@
+body {
+    padding-top: 70px;
+}
+
 @font-face {
     font-family: 'PantonLight';
     src: url('../font/panton-light.ttf');

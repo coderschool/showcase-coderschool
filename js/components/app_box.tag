@@ -11,7 +11,7 @@
 
         this.showDemo = function(app) {
             var $img = $(new Image());
-            $img.on('load', function() {
+            $img.one('load', function() {
                 $('.spinner-overlay').hide();
             });
             $img.attr('src', app.gifUrl);
@@ -108,5 +108,6 @@
 
     <style scoped>
        :scope {cursor: pointer;}
+        img {width: 58px;}
     </style>
 </app-icon>

@@ -1,6 +1,6 @@
 <app-details>
     <div id="introduction" class="col-md-12 animated slideInRight">
-        <h5><span>Introduction</span></h5>
+        <h5><span>Description</span></h5>
         <div id="introduction-text" class="text-block">
             <p id="text-intro">
                 {description}
@@ -9,7 +9,7 @@
 
     </div>
     <div id="author" class="col-md-12 animated slideInRight">
-        <h5><span> About Author:</span></h5>
+        <h5><span> About the Author:</span></h5>
         <p id="text-team" class="team-details">
             {cohortName} </p>
         <div class="member-list row">

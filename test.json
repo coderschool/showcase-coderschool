@@ -4,7 +4,7 @@
       "id": "recbuNqWOIGBEdZ8h",
       "fields": {
         "name": "Yelp",
-        "description": "Homework for Swift Class! Lorem Ipsum.\n\n\n",
+        "description": "The two primary challenges of this homework, which is given in Week 2, are to learn how to use AutoLayout for complicated UITableView rows, and establishing communication between view controllers via the delegate pattern.\n\nChau went above and beyond by also adding a map with custom map view markers, and for extra points, used Google Maps, which is a bit harder to integrate than using MapKit.\n\n",
         "media": [
           {
             "id": "attogMo13SbId69ok",
@@ -40,9 +40,130 @@
               }
             }
           }
-        ]
+        ],
+        "collections": [
+          "main"
+        ],
+        "gfycatName": "InexperiencedGrandInsect"
       },
       "createdTime": "2016-03-04T14:09:19.000Z"
+    },
+    {
+      "id": "recHmC1mbZeAxNmPD",
+      "fields": {
+        "name": "MovieDB",
+        "description": "The first homework, Movies, is all about learning how to call external APIs, update table views, and pass simple data between controllers. Buu went above and beyond by not only creating a really beautiful app, but by utilizing the full potential of the AlamoFire Networking library to cache API and image responses. You can also see things in grid view or list view, and, in both cases, run the gamut of great app features: search, pull to refresh, and infinite scroll.\n\n",
+        "media": [
+          {
+            "id": "attiJkN9WnfYnCsmu",
+            "url": "https://dl.airtable.com/IysKp3aESNiInkfVSJNV_walkthrough.gif",
+            "filename": "walkthrough.gif",
+            "size": 5869837,
+            "type": "image/gif"
+          }
+        ],
+        "cohortName": [
+          "Swift Dec 2015"
+        ],
+        "members": [
+          "recb4meiUD21MnJfc"
+        ],
+        "collections": [
+          "main"
+        ],
+        "gfycatName": "ElatedLimitedGalapagosdove"
+      },
+      "createdTime": "2016-03-04T21:10:57.000Z"
+    },
+    {
+      "id": "recgMtAq0BYar7w50",
+      "fields": {
+        "name": "Bluebird",
+        "description": "The third homework assignment of our Swift Course is to recreate a Twitter Client. This presents a few interesting challenges in advanced auto-layout and custom table view cells. The optional requirements also behoove the knowledge of NSDispatchCenter in maintaining state across View Controllers.\n\nThis student went above and beyond by implementing pull to refresh, infinite load, a sweet login animation, and a creative swipe to delete animation.\n",
+        "media": [
+          {
+            "id": "attQZjdLr7ABakRQI",
+            "url": "https://dl.airtable.com/q2377L3Q6GG0bRUynhCL_BlueBird.gif",
+            "filename": "BlueBird.gif",
+            "size": 2891439,
+            "type": "image/gif"
+          }
+        ],
+        "cohortName": [
+          "Swift Dec 2015"
+        ],
+        "members": [
+          "receTJddHiDvByY9e"
+        ],
+        "appIcon": [
+          {
+            "id": "attcjGHwO7lQewQBt",
+            "url": "https://dl.airtable.com/PpRxKkbRx6kL7bxn0fnQ_Icon-60%25403x.png",
+            "filename": "Icon-60%403x.png",
+            "size": 8374,
+            "type": "image/png",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/3V9VmcTQQQGXC8JwIcSh_Icon-60%25403x.png",
+                "width": 36,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/YfTAKfF4TpSanS6AUWSI_Icon-60%25403x.png",
+                "width": 256,
+                "height": 256
+              }
+            }
+          }
+        ],
+        "collections": [
+          "main"
+        ],
+        "gfycatName": "SilkyPhonyFirecrest"
+      },
+      "createdTime": "2016-03-07T17:02:27.000Z"
+    },
+    {
+      "id": "recAyumfuQuLrHhx7",
+      "fields": {
+        "name": "TeachMe",
+        "description": "Final Project\n\n",
+        "cohortName": [
+          "Swift August 2015"
+        ],
+        "members": [
+          "recj9QFsVOpFSYWzx",
+          "reczVCWy7oxRcUvL6",
+          "recReC7KGZQjWTJF3"
+        ],
+        "collections": [
+          "main",
+          "final"
+        ],
+        "gfycatName": "ActualKindCrow",
+        "appIcon": [
+          {
+            "id": "att577ZjKF4HhIopg",
+            "url": "https://dl.airtable.com/fq05YklESHCwtSK7GUgc_TeachMe-App-Icon-180.png",
+            "filename": "TeachMe-App-Icon-180.png",
+            "size": 16412,
+            "type": "image/png",
+            "thumbnails": {
+              "small": {
+                "url": "https://dl.airtable.com/1u1Fjo9RpeBrXO9IO1Aw_small_TeachMe-App-Icon-180.png",
+                "width": 36,
+                "height": 36
+              },
+              "large": {
+                "url": "https://dl.airtable.com/nIEnYSj6Tsif85cFqe4B_large_TeachMe-App-Icon-180.png",
+                "width": 256,
+                "height": 256
+              }
+            }
+          }
+        ]
+      },
+      "createdTime": "2016-03-18T05:48:29.000Z"
     }
   ]
 }

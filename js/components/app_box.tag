@@ -111,14 +111,11 @@
             if (cohortName) {
                 return (url + '&filterByFormula=' + encodeURIComponent('cohortName="' + cohortName + '"'));
             }
-            var collection = getParams('collection');
-            if (collection) {
-                return (url + '&filterByFormula=' + encodeURIComponent('FIND("' +
-                    collection + '", CONCATENATE(collections)) > 0'));
-            }
 
+            var collection = getParams('collection') || 'main';
+            return (url + '&filterByFormula=' + encodeURIComponent('FIND("' +
+                collection + '", CONCATENATE(collections)) > 0'));
 
-            return url;
         };
 
         this.on('mount', function() {

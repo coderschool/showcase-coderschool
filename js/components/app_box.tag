@@ -36,20 +36,29 @@
                 members: app.members,
                 cohortName: app.cohortName
             });
+
         };
 
         this.fetchAndUpdate = function() {
             var self = this;
 
-            if (location.hostname == 'localhost') {
-              var url = '/test.json';
-            } else {
-              // Reverse proxy to hide our API key from the world.
-              var url = "/airtable/v0/appXISBe0Du86nEiX/Apps?maxRecords=10";
-            }
-            $.getJSON(url).success(function(data) {
+           // Taken from http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript
+            var shuffle = function(a) {
+                var j, x, i;
+                for (i = a.length; i; i -= 1) {
+                    j = Math.floor(Math.random() * i);
+                    x = a[i - 1];
+                    a[i - 1] = a[j];
+                    a[j] = x;
+                }
+            };
+
+            $.getJSON(this.getSearchUrl()).success(function(data) {
                 var records = data.records;
                 var apps = [];
+                if (records.length == 0) {
+                    window.location.href = '/'; // Redirect back to root if there are no results.
+                }
                 for (var i=0; i < records.length; i++) {
                     var fieldsData = records[i].fields;
                     var members = [];
@@ -69,6 +78,7 @@
                         members: members
                     });
                 }
+                shuffle(apps);
                 if (!self.items) {
                     setTimeout(function () {
                         self.showDemo(apps[0]);
@@ -76,6 +86,39 @@
                 }
                 self.update({items: apps});
             });
+        };
+
+        this.getSearchUrl = function() {
+            if (location.hostname == 'localhost') {
+                var url = './test.json?maxRecords=20';
+            } else {
+                // Reverse proxy to hide our API key from the world.
+                var url = "/airtable/v0/appXISBe0Du86nEiX/Apps?maxRecords=20";
+            }
+
+            // Also taken from Stack Overflow somewhere.
+            var getParams = function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                        results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            };
+
+            var cohortName = getParams('cohortName');
+            if (cohortName) {
+                return (url + '&filterByFormula=' + encodeURIComponent('cohortName="' + cohortName + '"'));
+            }
+            var collection = getParams('collection');
+            if (collection) {
+                return (url + '&filterByFormula=' + encodeURIComponent('FIND("' +
+                    collection + '", CONCATENATE(collections)) > 0'));
+            }
+
+
+            return url;
         };
 
         this.on('mount', function() {

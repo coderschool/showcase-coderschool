@@ -14,13 +14,13 @@ GIFs are assumed to be uploaded to gfycat, for reasons I'll go into below.
 
 Right now there are the following fields:
 
-`name`: this needs to be unique
-`description`: this is the text that appears in the upper right when a submission is clicked
-`cohortName`: this is a single select. Right now the naming convention is `Language Month Year`, with titlecase, e.g. Swift December 2015.
-`members`: this is an array of references to people from the People table. Entries in the `People` table are just `name` (first name) and `media`. Airtable assumes all "attachment" types are arrays, but the code assumes there's one image here, and uses that image for the avatar.
-`appIcon`: similarly also a media field, and again the code assumes only one.
-`collections`: multiple select. I decided to use this instead of using the views functionality, but this is a grouping of "collections" the project belongs in, e.g. main for homepage, final for final project.
-`gfycatName`: the slug from gfycat. I used gfycat because it's just nice - it generates mp4 and webm (which I embed, instead of a GIF) as well as a poster image. The frontend relies on Gfycat's minimal API to fetch information about an image from its slug, which gives URLs to posters and videos.
+* `name`: this needs to be unique
+* `description`: this is the text that appears in the upper right when a submission is clicked
+* `cohortName`: this is a single select. Right now the naming convention is `Language Month Year`, with titlecase, e.g. Swift December 2015.
+* `members`: this is an array of references to people from the People table. Entries in the `People` table are just `name` (first name) and `media`. Airtable assumes all "attachment" types are arrays, but the code assumes there's one image here, and uses that image for the avatar.
+* `appIcon`: similarly also a media field, and again the code assumes only one.
+* `collections`: multiple select. I decided to use this instead of using the views functionality, but this is a grouping of "collections" the project belongs in, e.g. main for homepage, final for final project.
+* `gfycatName`: the slug from gfycat. I used gfycat because it's just nice - it generates mp4 and webm (which I embed, instead of a GIF) as well as a poster image. The frontend relies on Gfycat's minimal API to fetch information about an image from its slug, which gives URLs to posters and videos.
 
 ## How to run
 

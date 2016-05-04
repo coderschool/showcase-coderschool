@@ -48,7 +48,8 @@
             if (location.hostname == 'localhost') {
               var url = '/chau.json';
             } else {
-              var url = '/airtable/v0/appXISBe0Du86nEiX/People/' + this.id;
+              // var url = '/airtable/v0/appXISBe0Du86nEiX/People/' + this.id;
+              var url = "http://coderschoolv2-1.herokuapp.com/showcase/People/" + this.id;
             }
             $.getJSON(url).success(function(data) {
                 var fields = data.fields;

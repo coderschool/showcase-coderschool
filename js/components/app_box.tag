@@ -91,9 +91,10 @@
         this.getSearchUrl = function() {
             if (location.hostname == 'localhost') {
                 var url = './test.json?maxRecords=20';
+                console.log('loading apps from a local url', url)
             } else {
                 // Reverse proxy to hide our API key from the world.
-                var url = "/airtable/v0/appXISBe0Du86nEiX/Apps?maxRecords=20";
+                var url = "http://coderschoolv2-1.herokuapp.com/showcase?maxRecords=20";
             }
 
             // Also taken from Stack Overflow somewhere.
